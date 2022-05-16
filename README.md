@@ -31,8 +31,11 @@ Might need to run the following commands first if EF not previously used:
 ## Considerations
 
 Production Troubleshooting - Basic Serilog rolling file logging is implemented, in a production environment better options could include monitoring such as AWS cloudwatch or similar
-Validation - Request validation is achieved by .net model validation, using attributes
+
+Validation - Request validation is achieved by .net model validation, using attributes. This perhaps could be expanding for extra requirements such as min/max values etc
+
 Unit tests - Xunit with Moq unit tests have been added to test the basic application logic avoiding redundant framework testing, further/better tests could be added to test boundaries between salary, age etc 
+
 Improvements - Various comments in code with suggested improvments for a production version
 
 
