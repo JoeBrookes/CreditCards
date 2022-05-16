@@ -1,0 +1,41 @@
+[
+  {
+    "WorkflowName": "Applicant",
+    "Rules": [
+      {
+        "RuleName": "Age",
+        "SuccessEvent": "A1",
+        "ErrorMessage": "One or more applicant elligibility rules failed.",
+        "ErrorType": "Error",
+        "RuleExpressionType": "LambdaExpression",
+        "Expression": "input1.Age >= 18"
+      }
+    ]
+  },
+  {
+    "WorkflowName": "Barclaycard",
+    "Rules": [
+      {
+        "RuleName": "Barclaycard",
+        "SuccessEvent": "Barclaycard",
+        "ErrorMessage": "One or more barclarycard card rules failed.",
+        "ErrorType": "Error",
+        "RuleExpressionType": "LambdaExpression",
+        "Expression": "input1.Age >= 18 AND input1.Income > 30000"
+      }
+    ]
+  },
+  {
+    "WorkflowName": "Vanquis",
+    "Rules": [
+      {
+        "RuleName": "Vanquis",
+        "SuccessEvent": "Vanquis",
+        "ErrorMessage": "One or more vanquis card rules failed.",
+        "ErrorType": "Error",
+        "RuleExpressionType": "LambdaExpression",
+        "Expression": "input1.Age >= 18 AND input1.Income <= 30000"
+      }
+    ]
+  }
+]

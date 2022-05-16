@@ -1,0 +1,18 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="RulesEngine" Version="3.5.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Experian.CreditCards.Models\Experian.CreditCards.Models.csproj" />
+    <ProjectReference Include="..\Experian.CreditCards.Repo\Experian.CreditCards.Repo.csproj" />
+  </ItemGroup>
+
+</Project>
