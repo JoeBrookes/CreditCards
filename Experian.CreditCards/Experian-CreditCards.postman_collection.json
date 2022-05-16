@@ -1,0 +1,91 @@
+{
+	"variables": [],
+	"info": {
+		"name": "Experian-CreditCards",
+		"_postman_id": "109bd3c0-93c9-8135-9c9c-3c88bf65eb13",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Applicant too young",
+			"request": {
+				"url": "https://localhost:7059/api/CardApplicant",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"firstName\": \"Under\",\r\n  \"lastName\": \"Age\",\r\n  \"dob\": \"2005-01-01\",\r\n  \"income\": 15000\r\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "18 with 30k or less salary",
+			"request": {
+				"url": "https://localhost:7059/api/CardApplicant",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"firstName\": \"Average\",\r\n  \"lastName\": \"Joe\",\r\n  \"dob\": \"2004-01-01\",\r\n  \"income\": 29000\r\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Over 18 with over 30k salary",
+			"request": {
+				"url": "https://localhost:7059/api/CardApplicant",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"firstName\": \"Mr\",\r\n  \"lastName\": \"Overtime\",\r\n  \"dob\": \"2000-01-01\",\r\n  \"income\": 31000\r\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Bad Request",
+			"request": {
+				"url": "https://localhost:7059/api/CardApplicant",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"lastName\": \"Bad\",\r\n  \"dob\": \"2005-12-01\",\r\n  \"income\": 15000\r\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}

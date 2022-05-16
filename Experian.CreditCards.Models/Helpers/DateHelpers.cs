@@ -6,7 +6,7 @@
         {
             DateTime now = DateTime.Today;
             int age = now.Year - birthday.Year;
-            if (now < birthday.AddYears(age))
+            if (now < birthday.Date.AddYears(age))
                 age--;
 
             return age;
